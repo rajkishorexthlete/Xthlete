@@ -1,0 +1,92 @@
+/* FAQ Section - light theme to match rest of page */
+.faqSection {
+  padding: 48px 20px;
+  background: #ffffff;
+  color: #111;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 36px;
+  margin: 0 0 6px;
+}
+
+.subtitle {
+  color: #666;
+  margin: 0;
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.item {
+  border: 1px solid #dcdcdc;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.questionButton {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  color: inherit;
+  border: none;
+  padding: 14px 16px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.chevron {
+  margin-left: 12px;
+  transition: transform 200ms ease;
+}
+
+.questionButton[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+}
+
+.questionButton[aria-expanded="true"] {
+  color: #111;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 260ms ease, opacity 260ms ease, transform 260ms ease, padding 260ms ease;
+  opacity: 0;
+  transform: translateY(-4px);
+  padding: 0 16px;
+  color: #555;
+}
+
+/* Open state class applied via JS */
+.open {
+  max-height: var(--radix-accordion-content-height, 1000px);
+  opacity: 1;
+  transform: none;
+  padding: 12px 16px 16px;
+}
+
+/* Keep compatibility with data-state if used */
+.answer[data-state="open"] {
+  max-height: var(--radix-accordion-content-height, 1000px);
+  opacity: 1;
+  transform: none;
+  padding: 12px 16px 16px;
+}
