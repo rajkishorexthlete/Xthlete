@@ -1,223 +1,295 @@
-/* Journey */
 .journey {
-    text-align: center;
-    padding: 24px 16px;
-    max-width: 1100px;
-    margin: 0 auto;
+  text-align: center;
+  padding: 24px 16px 40px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .journeyTitle {
-    font-size: 22.5px;
-    margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: #222;
 }
 
 .journeySubtitle {
-    font-size: 14px;
-    color: #000;
-    margin: 0 0 16px;
+  font-size: 16px;
+  color: #666;
+  margin: 0;
 }
 
-.seeFeaturesBtn {
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    border-radius: 50px;
-    padding: 12px 28px;
-    background: #fff;
-    font-weight: 700;
-    cursor: pointer;
+.staticCards {
+  padding: 0 16px 80px;
 }
 
-/* x.Profile Cards (slider) */
-.profileSlider {
-    padding: 16px;
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
-.profileContainer {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+.cardItem {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  padding: 30px 20px;
+  text-align: center;
+  border: 1px solid #f3f4f6;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  height: 280px;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
 }
 
-.profileContent {
-    width: 100%;
-    position: relative;
+.cardItem:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-.profileWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 380px;
-    width: 100%;
+.cardIconPlaceholder {
+  font-size: 24px;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
-.profileItem {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    border-radius: 10px;
-    padding: 0;
-    width: 800px;
-    height: 90%;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateX(0) scale(0.8);
-    transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+.cardItem h3 {
+  font-size: 18px;
+  margin: 0 0 8px;
+  color: #333;
+  font-weight: 600;
 }
 
-.activeProfile {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0) scale(1);
-    z-index: 3;
-    pointer-events: none;
+.cardItem p {
+  font-size: 14px;
+  color: #777;
+  margin: 0 0 20px;
+  line-height: 1.5;
 }
 
-.prevProfile {
-    opacity: 0.5;
-    visibility: visible;
-    transform: translateX(-95%) scale(0.8);
-    z-index: 2;
-    cursor: pointer;
-    pointer-events: auto;
+.cardCta {
+  border: 1px solid #F97316;
+  background: #fff;
+  padding: 12px 28px;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #F97316;
+  text-align: center;
+  font-weight: 700;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.nextProfile {
-    opacity: 0.5;
-    visibility: visible;
-    transform: translateX(95%) scale(0.8);
-    z-index: 2;
-    cursor: pointer;
-    pointer-events: auto;
+.cardCta:hover {
+  background: #F97316;
+  color: #fff;
+  border-color: #F97316;
 }
 
-/* Profile slider arrows */
-.profileArrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background 0.3s ease, opacity 0.3s ease;
-    z-index: 5;
-    opacity: 0;
-    pointer-events: none;
+.aboutUs {
+  display: flex;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 16px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.profileSlider:hover .profileArrow {
-    opacity: 1;
-    pointer-events: auto;
+.imageGallery {
+  flex: 1;
+  min-width: 400px;
+  position: relative;
+  height: 450px;
 }
 
-.profileArrow:hover {
-    background: rgba(0, 0, 0, 0.8);
+.imageGallery img {
+  position: absolute;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-.profileLeftArrow {
-    left: 8px;
+.imageTopLeft {
+  top: 0;
+  left: 0;
+  width: 55%;
+  height: 50%;
+  border-radius: 10px;
+  z-index: 1;
 }
 
-.profileRightArrow {
-    right: 8px;
+.imageMain {
+  top: 10%;
+  right: 0;
+  width: 70%;
+  height: 80%;
+  border-radius: 0 15px 15px 0;
+  z-index: 2;
 }
 
-/* Dots */
-.profileDots {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    margin-top: 12px;
+.imageBottomLeft {
+  bottom: 0;
+  left: 5%;
+  width: 55%;
+  height: 60%;
+  border-radius: 10px;
+  z-index: 3;
 }
 
-.profileDot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #d0d0d0;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.2s ease, background 0.2s ease;
+.aboutContent {
+  flex: 1.2;
+  min-width: 400px;
+  text-align: left;
+  padding-left: 20px;
 }
 
-.activeDot {
-    background: #333;
-    transform: scale(1.1);
+.aboutSubtitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ff7700;
+  margin: 0 0 8px;
+  text-transform: uppercase;
 }
 
-@media (hover: hover) and (pointer: fine) {
-    .prevProfile:hover {
-        transform: translateX(-95%) scale(0.83);
-    }
+.aboutTitle {
+  font-size: 38px;
+  line-height: 1.2;
+  margin: 0 0 25px;
+  color: #222;
+}
 
-    .nextProfile:hover {
-        transform: translateX(95%) scale(0.83);
-    }
+.aboutBodyContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.aboutTextWrapper {
+  flex: 1;
+}
+
+.readMoreContainer {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rotatingText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: spin 12s linear infinite;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.readMoreLink {
+  color: #222;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 50px;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 2;
+  margin-right: 90px;
+}
+
+.readMoreLink:hover {
+  color: #ff7700;
+}
+
+.aboutParagraph {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  margin: 0 0 18px;
+}
+
+@media (max-width: 1024px) {
+  .aboutUs {
+    gap: 40px;
+  }
+  .imageGallery {
+    min-width: 350px;
+    height: 400px;
+  }
+  .aboutContent {
+    min-width: 350px;
+  }
+  .aboutTitle {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: 768px) {
-    .profileWrapper {
-        height: 340px;
-    }
+  .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 
-    .profileItem {
-        width: 90%;
-        height: 90%;
-    }
+  .cardItem {
+    width: 90%;
+    max-width: 400px;
+  }
+  .aboutUs {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .imageGallery {
+    width: 100%;
+    max-width: 450px;
+    min-width: unset;
+    height: 400px;
+  }
+  .aboutContent {
+    width: 100%;
+    min-width: unset;
+    padding-left: 0;
+  }
+  .aboutBodyContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .readMoreContainer {
+    margin: 20px 0 30px 0;
+  }
+  .aboutTitle {
+    font-size: 28px;
+  }
 }
 
 @media (max-width: 480px) {
-    .profileWrapper {
-        height: 300px;
-    }
-
-    .profileItem {
-        width: 92%;
-        height: 92%;
-    }
-}
-
-.xProfileCard {
-    background: #d3d3d3;
-    border-radius: 30px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.xProfileCard h3 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.xProfileCard p {
-    margin: 0;
-    font-size: 16px;
-    text-align: center;
-}
-
-.xProfileCard strong {
-    font-size: 18px;
-}
-
-.xProfileCta {
-    background: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 12px 22px;
-    font-weight: 700;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
+  .imageGallery {
+    height: 350px;
+  }
 }
