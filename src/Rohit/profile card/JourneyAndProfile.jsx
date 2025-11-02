@@ -58,12 +58,12 @@ const JourneyAndProfile = () => {
   <div className={styles.imageGallery}>
     <img
       src={imageTopLeftSrc}
-      alt="Athletes in action"
+      alt="Athletes image"
       className={styles.imageTopLeft}
     />
     <img
       src={imageMainSrc}
-      alt="Main tournament scene"
+      alt="Ttournament"
       className={styles.imageMain}
     />
     <img

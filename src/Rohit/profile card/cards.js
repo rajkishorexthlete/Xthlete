@@ -2,6 +2,8 @@ import {
   IoPersonOutline,
   IoStatsChartOutline,
   IoRibbonOutline,
+  
+  IoNewspaperOutline
 } from "react-icons/io5";
 const xProfileCards = [
   {
@@ -35,7 +37,7 @@ const xProfileCards = [
     iconColor: "#6366F1",
   },
   {
-    icon: IoPersonOutline, 
+    icon: IoNewspaperOutline, 
     title: 'Stay Updated with x.News',
     body:
       'Catch the latest updates, tournament highlights, and player spotlights — all in one place. Stay informed and inspired with the Xthlete community.',

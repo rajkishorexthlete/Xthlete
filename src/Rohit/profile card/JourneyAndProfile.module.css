@@ -1,3 +1,4 @@
+/*Section 1 Heading,tagline*/
 .journey {
   text-align: center;
   padding: 24px 16px 40px;
@@ -14,8 +15,10 @@
 
 .journeySubtitle {
   font-size: 16px;
-  color: #666;
-  margin: 0;
+  margin: 0 auto; 
+  max-width: 580px; 
+  line-height: 1.5;
+
 }
 .seeFeaturestn{
     margin: 20px 0;
@@ -25,6 +28,7 @@
   padding: 0 16px 80px;
 }
 
+/*Section-2 Cards*/
 .cardsContainer {
   display: flex;
   justify-content: center;
@@ -98,6 +102,8 @@
   color: #fff;
   border-color: #F97316;
 }
+
+/*Section-3 Aboutus*/
 
 .aboutUs {
   display: flex;
@@ -273,7 +279,15 @@
     width: 100%;
     max-width: 450px;
     min-width: unset;
-    height: 400px;
+    height: auto; 
+  }
+    .imageGallery img {
+        position: relative;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 10px; 
   }
   .aboutContent {
     width: 100%;
@@ -285,7 +299,7 @@
     align-items: flex-start;
   }
   .readMoreContainer {
-    margin: 20px 0 30px 0;
+    display: none;
   }
   .aboutTitle {
     font-size: 28px;
