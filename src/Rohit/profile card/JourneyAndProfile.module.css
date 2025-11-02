@@ -17,6 +17,9 @@
   color: #666;
   margin: 0;
 }
+.seeFeaturestn{
+    margin: 20px 0;
+}
 
 .staticCards {
   padding: 0 16px 80px;
@@ -26,14 +29,14 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-  max-width: 1100px;
+  max-width: 1500px;
   margin: 0 auto;
   flex-wrap: wrap;
 }
 
 .cardItem {
   flex: 1;
-  min-width: 280px;
+  min-width: 240px;
   max-width: 350px;
   padding: 30px 20px;
   text-align: center;
@@ -234,6 +237,7 @@
 }
 
 @media (max-width: 1024px) {
+    
   .aboutUs {
     gap: 40px;
   }
