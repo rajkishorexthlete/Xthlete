@@ -1,0 +1,135 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* --- App layout enhancements --- */
+.site-header {
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  margin-right: auto;
+}
+
+.nav a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.nav a.active {
+  background: #f2f2f2;
+}
+
+main.page {
+  padding: 24px 0 40px;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+}
+
+.hero p {
+  margin: 0 0 16px;
+  color: #666;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.option-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: left;
+}
+
+.option-card h3 {
+  margin: 0 0 8px;
+}
+
+.option-card p {
+  margin: 0 0 12px;
+  color: #555;
+}
+
+.option-card .card-link {
+  display: inline-block;
+  font-weight: 700;
+}
+
+.site-footer {
+  border-top: 1px solid #eee;
+  padding: 16px 0;
+  text-align: center;
+  color: #777;
+}

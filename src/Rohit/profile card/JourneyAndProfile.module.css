@@ -1,0 +1,223 @@
+/* Journey */
+.journey {
+    text-align: center;
+    padding: 24px 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.journeyTitle {
+    font-size: 22.5px;
+    margin: 0 0 8px;
+}
+
+.journeySubtitle {
+    font-size: 14px;
+    color: #000;
+    margin: 0 0 16px;
+}
+
+.seeFeaturesBtn {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+    padding: 12px 28px;
+    background: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* x.Profile Cards (slider) */
+.profileSlider {
+    padding: 16px;
+}
+
+.profileContainer {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profileContent {
+    width: 100%;
+    position: relative;
+}
+
+.profileWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 380px;
+    width: 100%;
+}
+
+.profileItem {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-radius: 10px;
+    padding: 0;
+    width: 800px;
+    height: 90%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(0) scale(0.8);
+    transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.activeProfile {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0) scale(1);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.prevProfile {
+    opacity: 0.5;
+    visibility: visible;
+    transform: translateX(-95%) scale(0.8);
+    z-index: 2;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.nextProfile {
+    opacity: 0.5;
+    visibility: visible;
+    transform: translateX(95%) scale(0.8);
+    z-index: 2;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+/* Profile slider arrows */
+.profileArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease, opacity 0.3s ease;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.profileSlider:hover .profileArrow {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.profileArrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.profileLeftArrow {
+    left: 8px;
+}
+
+.profileRightArrow {
+    right: 8px;
+}
+
+/* Dots */
+.profileDots {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.profileDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d0d0d0;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.activeDot {
+    background: #333;
+    transform: scale(1.1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .prevProfile:hover {
+        transform: translateX(-95%) scale(0.83);
+    }
+
+    .nextProfile:hover {
+        transform: translateX(95%) scale(0.83);
+    }
+}
+
+@media (max-width: 768px) {
+    .profileWrapper {
+        height: 340px;
+    }
+
+    .profileItem {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .profileWrapper {
+        height: 300px;
+    }
+
+    .profileItem {
+        width: 92%;
+        height: 92%;
+    }
+}
+
+.xProfileCard {
+    background: #d3d3d3;
+    border-radius: 30px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.xProfileCard h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.xProfileCard p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.xProfileCard strong {
+    font-size: 18px;
+}
+
+.xProfileCta {
+    background: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 22px;
+    font-weight: 700;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
